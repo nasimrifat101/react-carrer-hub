@@ -17,10 +17,11 @@ const Job = ({ job }) => {
 
   return (
     <div>
-      <div className="card card-compact bg-base-100 shadow-xl">
-        <figure>
-          <img src={logo} />
-        </figure>
+      <div className="card card-compact bg-base-100 shadow-md">
+        <div className="mx-5 mt-5">
+          <img className="" src={logo} />
+        </div>
+
         <div className="card-body">
           <h2 className="card-title">{job_title}</h2>
           <p>{company_name}</p>
@@ -43,9 +44,9 @@ const Job = ({ job }) => {
           </div>
           <p>{job_description}</p>
           <div className="card-actions">
-           <Link to ={`/job/${job.id}`} > 
-           <button className="btn btn-primary">View Details</button>
-           </Link>
+            <Link to={`/job/${job.id}`}>
+              <button className="btn btn-primary">View Details</button>
+            </Link>
           </div>
         </div>
       </div>
