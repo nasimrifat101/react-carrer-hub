@@ -20,7 +20,7 @@ const AppliedJobsCard = ({ job }) => {
         <div className="flex">
           {/* img */}
           <div className="flex justify-center items-center bg-[#F4F4F4] m-5">
-            <img className="max-h-20 max-w-20 p-5" src={logo} />
+            <img className="w-48 p-5" src={logo} />
           </div>
           {/* card */}
           <div className="card-body space-x-4">
