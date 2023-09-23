@@ -25,8 +25,8 @@ const AppliedJobsCard = ({ job }) => {
           {/* card */}
           <div className="card-body space-x-4">
             <h2 className="card-title text-2xl ml-4 my-3">{job_title}</h2>
-            <p className="text-lg text-gray-500">{company_name}</p>
-            <div className="">
+            <p className="text-lg text-left text-gray-500">{company_name}</p>
+            <div className="flex justify-start">
               <button className="btn btn-outline mr-4 text-violet-400">
                 {remote_or_onsite}
               </button>
