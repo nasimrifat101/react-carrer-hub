@@ -12,19 +12,18 @@ const Job = ({ job }) => {
     location,
     job_type,
     salary,
-    job_description,
   } = job;
 
   return (
     <div>
-      <div className="card card-compact bg-base-100 shadow-md">
-        <div className="mx-5 mt-5">
+      <div className="card card-compact bg-base-100 border-2 border-sky-50">
+        <div className="ml-8 mt-7">
           <img className="" src={logo} />
         </div>
 
-        <div className="card-body">
-          <h2 className="card-title">{job_title}</h2>
-          <p>{company_name}</p>
+        <div className="card-body space-x-4">
+          <h2 className="card-title text-2xl ml-4 my-3">{job_title}</h2>
+          <p className="text-lg text-gray-500">{company_name}</p>
           <div className="">
             <button className="btn btn-outline mr-4 text-violet-400">
               {remote_or_onsite}
@@ -33,7 +32,7 @@ const Job = ({ job }) => {
               {job_type}
             </button>
           </div>
-          <div className="mt-2 flex space-x-3">
+          <div className="mt-2 flex space-x-3 my-2 text-gray-500">
             <h1 className="flex items-center">
               <CiLocationOn className="text-2xl"></CiLocationOn> {location}
             </h1>
@@ -42,10 +41,9 @@ const Job = ({ job }) => {
               {salary}
             </h1>
           </div>
-          <p>{job_description}</p>
           <div className="card-actions">
             <Link to={`/job/${job.id}`}>
-              <button className="btn btn-primary">View Details</button>
+              <button className="btn bg-gradient-to-r from-[#6573CB] to-[#7A5CCC] ... text-gray-200">View Details</button>
             </Link>
           </div>
         </div>

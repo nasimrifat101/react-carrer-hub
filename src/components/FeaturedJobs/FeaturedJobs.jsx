@@ -15,9 +15,9 @@ const FeaturedJobs = () => {
 
   return (
     <div>
-      <div className="text-center">
-        <h2 className="text-4xl">Featured Jobs {jobs.length}</h2>
-        <p className="">
+      <div className="text-center pt-20">
+        <h2 className="text-4xl mb-4 font-bold">Featured Jobs</h2>
+        <p className="text-gray-400 mb-6">
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
@@ -27,14 +27,16 @@ const FeaturedJobs = () => {
           <Job job={job} key={job.id}></Job>
         ))}
       </div>
-      <div className={dataLength === jobs.length? "hidden" : " "}>
+     <div className="flex justify-center">
+     <div className={dataLength === jobs.length? "hidden" : " "}>
         <button
           onClick={() => setDataLength(jobs.length)}
-          className="btn btn-primary"
+          className="btn bg-gradient-to-r from-[#6573CB] to-[#7A5CCC] ... text-gray-100 mt-5"
         >
           Show All Jobs
         </button>
       </div>
+     </div>
     </div>
   );
 };
