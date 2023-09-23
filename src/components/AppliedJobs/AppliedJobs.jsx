@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../../Utility/localStorage";
+import AppliedJobsCard from "../AppliedJobsCard/AppliedJobsCard";
 
 const AppliedJobs = () => {
   const jobs = useLoaderData();
@@ -39,10 +40,9 @@ const AppliedJobs = () => {
   }, [jobs]);
 
   return (
-    <div>
-      <h2>Jobs I Applied {appliedJobs.length}</h2>
-      <details className="dropdown mb-32">
-        <summary className="m-1 btn">open or close</summary>
+    <div className="text-right">
+      <details className="dropdown mb-2">
+        <summary className="m-1 btn">Filter By</summary>
         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
           <li onClick={() => handleJobsFilter("all")}>
             <a>All</a>
@@ -57,12 +57,7 @@ const AppliedJobs = () => {
       </details>
       <ul>
         {dJobs.map((job) => (
-          <li key={job.id}>
-            {" "}
-            <span>
-              {job.job_title} {job.company_name} : {job.remote_or_onsite}
-            </span>
-          </li>
+          <AppliedJobsCard job={job} key={job.id}></AppliedJobsCard>
         ))}
       </ul>
     </div>
